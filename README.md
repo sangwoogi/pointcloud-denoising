@@ -31,10 +31,10 @@ pip install open3d nuscenes-devkit scipy tqdm
 ## 🚩 Folder Structure
 ```
 PointCloud-Denoising/
-├── data/                   # (Git 제외) nuScenes 데이터셋
-├── checkpoints/            # (Git 제외) 학습된 가중치
-├── results/                # (Git 제외) 시각화 결과물
-├── dataset.py              # 데이터 로더 (cKDTree 라벨링 포함)
+├── data/                   # nuScenes-mini 데이터셋
+├── checkpoints/            # 학습된 가중치
+├── results/                # 시각화 결과물
+├── dataset.py              # 데이터 로더
 ├── model.py                # spconv 기반 MinkUNet 구조
 ├── train.py                # 학습 루프 (Focal Loss)
 ├── eval.py                 # 지표 평가 (IoU, Recall, Precision)
