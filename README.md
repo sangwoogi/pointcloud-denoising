@@ -1,6 +1,23 @@
-# pointcloud-denoising
----
-# folder structure
+# 3D Point Cloud Denoising for Autonomous Driving ❄️🚗
+
+딥러닝 기반의 3D Point Cloud 전처리 네트워크입니다. 
+자율주행 라이다(LiDAR) 센서 데이터에 낀 악천후 노이즈(눈, 비)를 픽셀(포인트) 단위로 찾아내어 제거합니다.
+
+## 🚀 Project Overview
+* **Task:** 3D Point Cloud Binary Semantic Segmentation (Noise vs. Clean)
+* **Architecture:** Sparse 3D U-Net (MinkUNet inspired)
+* **Framework:** PyTorch, `spconv` (Optimized for modern GPUs like RTX 30/40/50 series)
+* **Dataset:** nuScenes-mini (with synthetic snow corruption)
+
+## 🛠️ Environment Setup
+\`spconv\`를 활용하여 복잡한 C++ 빌드 없이 구축 가능합니다. (CUDA 12.0 기준)
+
+```bash
+pip install torch torchvision torchaudio
+pip install spconv-cu120
+pip install open3d nuscenes-devkit scipy tqdm
+
+## folder structure
 ```
 3D-PointCloud-Denoising/
 ├── data/                   # (Git 제외) nuScenes 데이터셋
