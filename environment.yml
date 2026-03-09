@@ -1,0 +1,30 @@
+name: denoising
+channels:
+  - defaults
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - packaging
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
+      - numpy==1.26.4
+      - pandas
+      - scipy
+      - scikit-learn
+      - matplotlib
+      - open3d
+      - opencv-python-headless
+      - nuscenes-devkit
+      - spconv-cu120
+      - cuda-toolkit==12.8.1
+      - tqdm
+      - pyyaml
+      - plotly
+      - flask
+      - dash
+      - cumm-cu120
