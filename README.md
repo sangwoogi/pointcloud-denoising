@@ -16,6 +16,7 @@
 pip install torch torchvision torchaudio
 pip install spconv-cu120
 pip install open3d nuscenes-devkit scipy tqdm
+```
 
 ## folder structure
 ```
