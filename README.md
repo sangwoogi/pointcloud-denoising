@@ -9,6 +9,16 @@
 * **Framework:** PyTorch, `spconv` (Optimized for modern GPUs like RTX 30/40/50 series)
 * **Dataset:** nuScenes-mini (with synthetic snow corruption)
 
+## 📊 Performance Evaluation
+
+| Metric | Value | Description |
+| :--- | :---: | :--- |
+| **Overall Accuracy** | **97.75%** | 전체 포인트 클라우드에 대한 분류 정확도 |
+| **Precision** | **84.65%** | **원본 보존율**: 정상 포인트를 노이즈로 오검출하지 않은 비율 |
+| **Recall** | **82.39%** | **눈 제거율**: 실제 눈 노이즈를 정확하게 찾아내 제거한 비율 |
+| **F1 Score** | **0.8351** | Precision과 Recall의 조화 평균 |
+| **Snow Class IoU** | **71.68%** | 눈 노이즈 클래스에 대한 정밀 평가지표 (Intersection over Union) |
+
 ## 🛠️ Environment Setup
 \`spconv\`를 활용하여 복잡한 C++ 빌드 없이 구축 가능합니다. (CUDA 12.0 기준)
 
@@ -18,9 +28,9 @@ pip install spconv-cu120
 pip install open3d nuscenes-devkit scipy tqdm
 ```
 
-## folder structure
+## 🚩 Folder Structure
 ```
-3D-PointCloud-Denoising/
+PointCloud-Denoising/
 ├── data/                   # (Git 제외) nuScenes 데이터셋
 ├── checkpoints/            # (Git 제외) 학습된 가중치
 ├── results/                # (Git 제외) 시각화 결과물
